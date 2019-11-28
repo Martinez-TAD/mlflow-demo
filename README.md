@@ -10,9 +10,9 @@ You can create a directory named data at the root of your project and download t
 ### Project setup
 To run this project, it is recommended to first setup a virtual environment and install the requirements.txt in it.
 ```bash
-virtual env -p path/to/your/python venv
+virtualenv -p path/to/your/python venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r psp/requirements.txt
 ```
 
 ### Writing the minimal training script
@@ -212,8 +212,11 @@ This tracking server includes:
 
 Hence, you need to set 3 environment variables to enable the mlflow client to communicate with the tracking server, before launching the
 execution of the training code via mlflow command:
+
+The MLflow UI is visible here: http://34.89.15.138
+
 ```bash
-export MLFLOW_TRACKING_URI=http://35.205.28.1
+export MLFLOW_TRACKING_URI=http://34.89.15.138
 export MLFLOW_TRACKING_USERNAME="ms-bgd"
 export MLFLOW_TRACKING_PASSWORD="xxx" # ==> I'll share it in slack
 
